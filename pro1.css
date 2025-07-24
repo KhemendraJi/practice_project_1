@@ -1,0 +1,417 @@
+:root {
+  color-scheme: light dark;
+  --primary-color: #111;
+  --secondary-color: gray;
+  --white: #fff;
+  --black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /* overflow: hidden; */
+}
+body {
+  background-color: var(--black);
+  /* position: relative; */
+}
+
+
+
+.underline{
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--white);
+  transition: all ease 0.5s;
+  width: 100%;
+  opacity: 0;
+}
+#hero-footer h5:hover .underline{
+  animation: underline 0.6s ease-in-out;
+  opacity: 1;
+}
+
+
+@keyframes underline{
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
+  
+}
+
+
+
+
+.cursor {
+  height: 15px;
+  width: 15px;
+  background-color: var(--white);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  mix-blend-mode:difference;
+  will-change: transform;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cursor h2{
+  font-size: 20px;
+  opacity: 0;
+  color: black;
+  pointer-events: none;
+}
+.cursor-blur {
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 99999;
+  height: 20vmax;
+  width: 20vmax;
+  background-color: var(--white);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  opacity: 0;
+  will-change: transform;
+  filter: blur(40px);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#main {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  /* overflow: hidden; */
+}
+
+#hero {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.7vmax 3.4vmax;
+  width: 100%;
+  color: var(--white);
+}
+
+#logo {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+#menu {
+  font-size: 1rem;
+}
+
+#heading {
+  text-transform: uppercase;
+  padding: 0 3.4vmax;
+  margin-top: 40px;
+}
+#heading h1 {
+  font-weight: 500;
+  line-height: 0.95;
+  font-size: 10vw;
+  color: var(--secondary-color);
+}
+
+.blocktest {
+  width: fit-content;
+}
+.blocktest h5 {
+  margin-top: 5px;
+  text-align: right;
+  font-weight: bolder;
+  font-size: 1em;
+}
+
+#small-heading {
+  margin-top: 10%;
+  text-transform: uppercase;
+  text-align: right;
+  padding-right: 3.4vmax;
+  font-weight: 900;
+}
+#small-heading h5 {
+  font-size: 1.1vmax;
+  font-weight: 500;
+}
+
+#hero-footer h5 i {
+  display: inline-block;
+  transition: all linear 0.2s;
+}
+
+#hero-footer {
+  position: absolute;
+  bottom: 30px;
+  left: 3.4vmax;
+  right: 3.4vmax;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#hero-footer h5 {
+  font-size: 1.1vmax;
+  font-weight: 500;
+  position: relative;
+}
+
+.work-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.work-icons i {
+  transition: all linear 0.2s;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  align-self: center;
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-footer > *:hover {
+  cursor: pointer;
+}
+#hero-footer h5:hover i {
+  transform: rotate(45deg);
+}
+
+#second {
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 3.4vmax;
+  margin-top: 20vh;
+  position: relative;
+  padding-right: 10vw;
+}
+
+.elem {
+  display: flex;
+  align-items: center;
+  border-top: 2px solid var(--secondary-color);
+  padding-top: 9vh;
+  padding-bottom: 9vh;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  transition: all ease 0.9s;
+}
+.elemlast {
+  border-bottom: 2px solid var(--secondary-color);
+}
+.elem img {
+  position: absolute;
+  height: 130%;
+  /* left: 70%; */
+  border-radius: 10%;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 10;
+  /* display: none; */
+}
+.elem h1 {
+  font-size: 6.7em;
+  font-weight: 500;
+  color: var(--white);
+  opacity: 0.9;
+  letter-spacing: -0.2rem;
+  transition: all ease 0.9s;
+}
+
+.elem:hover{
+  cursor: pointer;
+}
+.elem:hover h1{
+  padding-left: 5vw;
+  color: var(--secondary-color);
+  /* opacity: 0.5; */
+}
+
+.all-work {
+  padding: 5px 20px;
+  border-radius: 100px;
+  font-size: 1em;
+  background-color: transparent;
+  margin-top: 3rem;
+  transition: all ease 0.5s;
+}
+.all-work:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+.slider {
+  margin-top: 25vh;
+  margin-bottom: 40vh;
+  overflow-x: hidden;
+  border-top: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
+  position: relative;
+}
+.slider-track {
+  display: flex;
+  width: 300%;
+  align-items: center;
+  flex-wrap: nowrap;
+  /* background-color: #fff; */
+  /* gap: 7vw; */
+  padding: 3vmax 4vmax;
+  animation: slider 60s linear infinite;
+  transition: all 0.3s ease;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider img {
+  height: 9vh;
+  margin-right: 8vw;
+}
+/*
+  For a seamless slider, remove margin from the last image of the first set and the last image overall.
+  Replace N with the number of unique images in your slider.
+*/
+.slider-track img:last-child {
+  margin-right: 0;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+
+.bounding{
+  width: fit-content;
+overflow: hidden;}
+.about-me-main {
+  min-height: 75vh;
+  position: relative;
+  padding: 4vmax 3.4vmax;
+  padding-top: 2vmax;
+  margin-bottom: 10vh;
+}
+
+.about-me {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: 11%;
+  gap: 4vmax;
+  flex-wrap: wrap;
+}
+
+.about-me img {
+  width: 19%;
+}
+.about-text {
+  width: 35%;
+  min-width: 300px;
+}
+.about-text h2 {
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+  font-size: 1em;
+}
+.about-text p {
+  width: 100%;
+  font-size: 1.1em;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.about-text button {
+  padding: 7px 20px;
+  border-radius: 100px;
+  font-size: 0.9em;
+  background-color: transparent;
+  transition: all ease 0.5s;
+}
+.about-text button:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+
+.about-me-bottom {
+  position: absolute;
+  bottom: 10px;
+}
+.about-me-bottom > h4 {
+  font-size: 0.9em;
+  color: var(--secondary-color);
+}
+.about-me-bottom > h3 {
+  font-size: 1.1em;
+}
+.about-me-bottom h3:hover .underline{
+  animation: underline 0.6s ease-in-out;
+  opacity: 1;
+}
+
+.about-me-bottom h3:hover i {
+  transform: rotate(45deg);
+}
+.about-me-bottom i {
+  display: inline-block;
+  transition: all ease 0.5s;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vmax 3.4vmax;
+}
+
+.foot-left {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 2vmax;
+}
+.foot-right {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 2vmax;
+}

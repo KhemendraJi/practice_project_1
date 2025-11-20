@@ -17,7 +17,7 @@ This project was like a crash course in web development for me. Here’s what I 
 
 #### How I Did It
 
-I started by checking out the original website (cynthiaugwu.com) to understand its design and features. Then, I followed a tutorial from Sheriyans Coding School on YouTube to learn how to use Locomotive Scroll and create a custom cursor. I made sure to write the code myself and understand each part instead of just copying it. It was a lot of work, but seeing the final result made it worth it!
+I started by checking out the original website (cynthiaugwu.com) to understand its design and features. Then, I try to do it myself and followed a tutorial from Sheriyans Coding School on YouTube on parts which are new to me like to learn how to use Locomotive Scroll and create a custom cursor. I made sure to write the code myself and understand each part instead of just copying it. It was a lot of work, but seeing the final result made it worth it!
 
 #### Challenges I Faced
 
